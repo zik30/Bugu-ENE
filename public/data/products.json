@@ -36,7 +36,7 @@
         "name": "С Петрушкой",
         "description": "Освежает, тонизирует и выравнивает тон кожи, обладает мягким отбеливающим эффектом.",
         "price": 250,
-        "image": "/public/products/petrushka.jpg",
+        "image": "/products/petrushka.jpg",
         "category": "Soap"
     },
     {

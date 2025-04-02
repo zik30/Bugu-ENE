@@ -7,7 +7,7 @@ function ProductsPage() {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const resp = await axios.get("../../../public/data/products.json");
+    const resp = await axios.get("/data/products.json");
     const data = resp.data;
     setProducts(data);
   };
