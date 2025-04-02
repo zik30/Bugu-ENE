@@ -4,7 +4,7 @@
         "name": "С Ромашкой",
         "description": "Oбладает успокаивающим эффектом, снимает раздражение и воспаление.",
         "price": 250,
-        "image": "../../../public/products/romashka.jpg",
+        "image": "/products/romashka.jpg",
         "category": "Soap"
     },
     {
@@ -12,7 +12,7 @@
         "name": "С Календулой",
         "description": "бладает антисептическими свойствами, подходит для чувствительной кожи.",
         "price": 250,
-        "image": "../../../public/products/kalendula.jpg",
+        "image": "/products/kalendula.jpg",
         "category": "Soap"
     },
     {
@@ -20,7 +20,7 @@
         "name": "С Прополисом",
         "description": "идеальный антисептик, ускоряет заживление и ухаживает за кожей.",
         "price": 250,
-        "image": "../../../public/products/propolis.jpg",
+        "image": "/products/propolis.jpg",
         "category": "Soap"
     },
     {
@@ -28,7 +28,7 @@
         "name": "С Козьим молоком",
         "description": "Питает и увлажняет кожу, делает её мягкой и эластичной.",
         "price": 250,
-        "image": "../../../public/products/kozye_moloko.jpg",
+        "image": "/products/kozye_moloko.jpg",
         "category": "Soap"
     },
     {
@@ -36,7 +36,7 @@
         "name": "С Петрушкой",
         "description": "Освежает, тонизирует и выравнивает тон кожи, обладает мягким отбеливающим эффектом.",
         "price": 250,
-        "image": "../../../public/products/petrushka.jpg",
+        "image": "/public/products/petrushka.jpg",
         "category": "Soap"
     },
     {
@@ -44,7 +44,7 @@
         "name": "С Полынью",
         "description": "глубоко очищает, освежает и насыщает кожу полезными микроэлементами.",
         "price": 250,
-        "image": "../../../public/products/polin.jpg",
+        "image": "/products/polin.jpg",
         "category": "Soap"
     },
     {
@@ -52,7 +52,7 @@
         "name": "С Абрикосом",
         "description": "освежает, увлажняет и придаёт коже здоровое сияние.",
         "price": 250,
-        "image": "../../../public/products/abrikos.jpg",
+        "image": "/products/abrikos.jpg",
         "category": "Soap"
     },
     {
@@ -60,7 +60,7 @@
         "name": "С Облепихой",
         "description": " заживляет мелкие повреждения, устраняет воспаления и питает кожу витаминами.",
         "price": 250,
-        "image": "../../../public/products/oblepiha.jpg",
+        "image": "/products/oblepiha.jpg",
         "category": "Soap"
     },
     {
@@ -68,7 +68,7 @@
         "name": "С Облепихой",
         "description": "интенсивно увлажняет, питает кожу и придаёт ей здоровое сияние, делает её мягкой и гладкой.",
         "price": 280,
-        "image": "../../../public/products/oblepiha.jpg",
+        "image": "/products/oblepiha.jpg",
         "category": "Cream"
     },
     {
@@ -76,7 +76,7 @@
         "name": "С Aбрикосом",
         "description": "интенсивно увлажняет, питает кожу и придаёт ей здоровое сияние, делает её мягкой и гладкой.",
         "price": 280,
-        "image": "../../../public/products/abrikos.jpg",
+        "image": "/products/abrikos.jpg",
         "category": "Cream"
     }
 ]

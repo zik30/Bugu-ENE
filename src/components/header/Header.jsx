@@ -19,7 +19,7 @@ function Header() {
         <div className={stl.logo}>
           <p id={stl.left}>БУГУ ЭНЕ</p>
           <img style={{ height: 57, objectFit: "contain" }} 
-            src="../../../public/logo/logoWhite.png"
+            src="/logo/logoWhite.png"
             alt="Bugu Ene logo samin"
           />
           <p>BUGU ENE</p>
