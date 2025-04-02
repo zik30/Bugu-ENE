@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "images": "../../../public/proccess/japan.jpg"
+    },
+    {
+        "id": 2,
+        "images": "../../../public/proccess/procces.jpg"
+    },
+    {
+        "id": 3,
+        "images": "../../../public/proccess/proccess.jpg"
+    },
+    {
+        "id": 4,
+        "images": "../../../public/proccess/proccess2.jpg"
+    },
+    {
+        "id": 5,
+        "images": "../../../public/proccess/proccess3.jpg"
+    },
+    {
+        "id": 6,
+        "images": "../../../public/proccess/worker.jpg"
+    }
+]

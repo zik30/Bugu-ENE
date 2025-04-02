@@ -1,0 +1,72 @@
+.productsPage {
+  .container {
+    width: 380px;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+  }
+  .header {
+    h2 {
+      font-size: 30px;
+      margin: 0;
+      width: 300px;
+      margin: 0 auto 20px;
+    }
+    p {
+      margin: 0 auto 50px;
+      font-size: 16px;
+      line-height: 30px;
+      width: 300px;
+    }
+  }
+  .soaps_inner {
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      margin: 30px 0 0 0;
+      font-size: 20px;
+      font-weight: 500;
+      color: #5d88f6;
+    }
+  }
+  .creams_inner {
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      margin: 30px 0 0 0;
+      font-size: 20px;
+      font-weight: 500;
+      color: #5d88f6;
+    }
+  }
+}
