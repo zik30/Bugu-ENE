@@ -12,12 +12,12 @@ function AboutUsPage() {
   const [proccesses, setProccesses] = useState([])
 
   const fetchProducts = async() => {
-    const resp = await axios.get("../../../public/data/products.json");
+    const resp = await axios.get("/data/products.json");
     const data = resp.data;
     setProducts(data);
   };
   const fetchProccesses = async() => {
-    const resp = await axios.get("../../../public/data/proccess.json");
+    const resp = await axios.get("/data/proccess.json");
     const data = resp.data;
     setProccesses(data);
   };

@@ -14,7 +14,7 @@ function MainPage() {
   const [ products, setProducts ] = useState([])
 
   const fetchProducts = async() => {
-    const resp = await axios.get("../../../public/data/products.json");
+    const resp = await axios.get("/data/products.json");
     const data = resp.data;
     setProducts(data);
   };
@@ -74,7 +74,7 @@ function MainPage() {
               <Card
                 hoverable
                 style={{ width: 200, height: 300 }}
-                cover={<img alt="example" src={'../../../public/collection/samin3.jpg'} />}
+                cover={<img alt="example" src={'/collection/samin3.jpg'} />}
               >
                 <Card.Meta
                   title={<Link to={"/products"}>Подробнее</Link>}
