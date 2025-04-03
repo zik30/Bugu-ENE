@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import stl from "./header.module.scss";
-import { MenuOutlined } from "@ant-design/icons";
+import { HomeFilled, InfoCircleFilled, MenuOutlined, PhoneFilled, ShoppingFilled } from "@ant-design/icons";
 import { Button, Divider, Drawer } from "antd";
 import { Link } from "react-router-dom";
 
 function Header() {
+  const [isActive, setIsActive] = useState('mainPage');
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
   };
-  const onClose = () => {
+  const closed = (e) => {
     setOpen(false);
+    setIsActive(e.target.innerText);
   };
+
+
 
   return (
     <div className={stl.header}>
@@ -28,17 +32,17 @@ function Header() {
           <Button onClick={showDrawer}>
             <MenuOutlined />
           </Button>
-          <Drawer title="Pages" onClose={onClose} open={open}>
+          <Drawer className={stl.drawer} style={{backgroundColor:"rgb(203 181 250)"}} title="Pages" onClose={closed} open={open}>
             <div className={stl.drawer_pages}>
-              <Link to="/">Main Page</Link>
+              <Link style={isActive === 'Main Page' ? { textDecoration: 'underline' } : {}} onClick={closed} to="/"><HomeFilled />   Main Page</Link>
               <Divider />
-              <Link to="/products">Our Products</Link>
+              <Link style={isActive === 'Our Products' ? { textDecoration: 'underline' } : {}} onClick={closed} to="/products"><ShoppingFilled />   Our Products</Link>
               <Divider />
-              <Link to="/aboutUs">About Us</Link>
+              <Link style={isActive === 'About Us' ? { textDecoration: 'underline' } : {}} onClick={closed} to="/aboutUs"><InfoCircleFilled />   About Us</Link>
               <Divider />
-              <Link to="/contacts">Our Contacts</Link>
+              <Link style={isActive === ' Our Contacts' ? { textDecoration: 'underline' } : {}} onClick={closed} to="/contacts"><PhoneFilled />   Our Contacts</Link>
               <Divider />
-              <Button type="primary">Заказать</Button>
+              <Button onClick={()=>setOpen(false)} type="primary">Заказать</Button>
             </div>
           </Drawer>
         </div>
