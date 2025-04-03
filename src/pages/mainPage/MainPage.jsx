@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import { Card } from "antd";
+import { Button, Card } from "antd";
 import axios from "axios";
 
 
@@ -37,7 +37,7 @@ function MainPage() {
             В 2010 году в селе Тасма, Тюпского района Иссык-Кульской области,
             было основано мыловаренное сообщество «Бугу-эне». Мы изготавливаем
             экологически чистое мыло вручную из местных трав и цветов.{" "}
-            <Link to={"/aboutUs"}>Подробнее...</Link>
+            <Link to={"/aboutUs"}><Button >Подробнее...</Button></Link>
           </p>
         </div>
       </div>
