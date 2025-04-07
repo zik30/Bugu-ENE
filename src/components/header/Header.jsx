@@ -5,14 +5,16 @@ import { Button, Divider, Drawer } from "antd";
 import { Link } from "react-router-dom";
 
 function Header() {
-  const [isActive, setIsActive] = useState('mainPage');
+  const [isActive, setIsActive] = useState('Main Page');
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
   };
   const closed = (e) => {
     setOpen(false);
-    setIsActive(e.target.innerText);
+    if(e.target.innerText) {
+      setIsActive(e.target.innerText);
+    }
   };
 
 
@@ -34,15 +36,16 @@ function Header() {
           </Button>
           <Drawer className={stl.drawer} style={{backgroundColor:"rgb(203 181 250)"}} title="Pages" onClose={closed} open={open}>
             <div className={stl.drawer_pages}>
-              <Link style={isActive === 'Main Page' ? { textDecoration: 'underline' } : {}} onClick={closed} to="/"><HomeFilled />   Main Page</Link>
+              <Link style={isActive === 'Main Page' ? { color: "#8b58fa" } : {}} onClick={closed} to="/"><HomeFilled />   Main Page</Link>
               <Divider />
-              <Link style={isActive === 'Our Products' ? { textDecoration: 'underline' } : {}} onClick={closed} to="/products"><ShoppingFilled />   Our Products</Link>
+              <Link style={isActive === 'Our Products' ? { color: "#8b58fa" } : {}} onClick={closed} to="/products"><ShoppingFilled />   Our Products</Link>
               <Divider />
-              <Link style={isActive === 'About Us' ? { textDecoration: 'underline' } : {}} onClick={closed} to="/aboutUs"><InfoCircleFilled />   About Us</Link>
+              <Link style={isActive === 'About Us' ? { color: "#8b58fa" } : {}} onClick={closed} to="/aboutUs"><InfoCircleFilled />   About Us</Link>
               <Divider />
-              <Link style={isActive === ' Our Contacts' ? { textDecoration: 'underline' } : {}} onClick={closed} to="/contacts"><PhoneFilled />   Our Contacts</Link>
+              <Link style={isActive === ' Our Contacts' ? { color: "#8b58fa" } : {}} onClick={closed} to="/contacts"><PhoneFilled />   Our Contacts</Link>
               <Divider />
-              <Button onClick={()=>setOpen(false)} type="primary">Заказать</Button>
+              <Link to={'/order'}><Button onClick={()=>setOpen(false)} type="primary">Оставить заявку!</Button></Link>
+              
             </div>
           </Drawer>
         </div>

@@ -1,0 +1,23 @@
+.contactsPage {
+  .container {
+    width: 380px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .main{
+    height: 100vh;
+    padding-top: 40px;
+    .contacts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: start;
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+    }
+}

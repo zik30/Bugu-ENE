@@ -41,7 +41,7 @@
       margin: 30px 0 0 0;
       font-size: 20px;
       font-weight: 500;
-      color: #5d88f6;
+      color: #8b58fa;
     }
   }
   .creams_inner {
@@ -66,7 +66,14 @@
       margin: 30px 0 0 0;
       font-size: 20px;
       font-weight: 500;
-      color: #5d88f6;
+      color: #8b58fa;
     }
   }
+}
+
+
+.customChecklist li::before {
+  content: '✔';
+  margin-right: 8px;
+  color: green;
 }

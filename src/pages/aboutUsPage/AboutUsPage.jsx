@@ -3,28 +3,26 @@ import stl from "./aboutUsPage.module.scss";
 import { Carousel } from "antd";
 import axios from "axios";
 
-
-
-
 function AboutUsPage() {
+  const [products, setProducts] = useState([]);
+  const [proccesses, setProccesses] = useState([]);
 
-  const [ products, setProducts ] = useState([])
-  const [proccesses, setProccesses] = useState([])
-
-  const fetchProducts = async() => {
+  const fetchProducts = async () => {
     const resp = await axios.get("/data/products.json");
     const data = resp.data;
     setProducts(data);
   };
-  const fetchProccesses = async() => {
+  const fetchProccesses = async () => {
     const resp = await axios.get("/data/proccess.json");
     const data = resp.data;
     setProccesses(data);
   };
-  useEffect( ()=>{fetchProducts(), fetchProccesses()}, [])
+  useEffect(() => {
+    fetchProducts(), fetchProccesses();
+  }, []);
 
   const contentStyle = {
-    height: "160px",
+    height: "210px",
     width: "100%",
     objectFit: "cover",
   };
@@ -35,13 +33,10 @@ function AboutUsPage() {
         <div className={stl.container}>
           <h2>About Us</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            cupiditate est quaerat minima esse unde officiis molestiae
-            architecto, nobis deserunt optio veritatis! Minima nulla quis,
-            ratione culpa ipsa numquam iure repudiandae inventore architecto
-            animi quasi assumenda nemo laboriosam distinctio pariatur eos
-            dolore, reprehenderit quidem eum obcaecati iste cupiditate dolores
-            non!
+            В селе Тасма, Тюпского района Иссык-Кульской области, в 2010 году
+            было создано мыльное сообщество "Бугу-эне". Мы изготавливаем
+            экологически чистое мыло вручную из трав и цветов, произрастающих в
+            нашей деревне. 
           </p>
         </div>
       </div>
@@ -50,19 +45,27 @@ function AboutUsPage() {
           <div className={stl.enactus_inner}>
             <h2>Enactus</h2>
             <p>
-              Enactus is a global nonprofit organization dedicated to inspiring
-              students to improve the world through entrepreneurial action.
-              Enactus teams create and implement community empowerment projects
-              that address social, economic, and environmental challenges.
+              Наше сообщество "Бугу-Эне" сотрудничает с командой Enactus Манас
+              Университета.<br />
+              Enactus — это глобальное движение студентов, которые используют
+              предпринимательство для позитивных социальных изменений. Команда
+              Enactus Университета Манас занимается улучшением маркетинга, брендинга и стратегии
+              продаж. Благодаря им продукция "Бугу Эне" стала известно более широкой 
+              аудитории, выйти в онлайн-пространство и
+              повысился интерес к экологически чистому мылу, которое создается
+              вручную. Это усилило роль женщин в нашем
+              сообществе, дало толчок развитию сельского предпринимательства и
+              показало, как можно использовать местные ресурсы для устойчивого
+              будущего. Enactus Кыргызстан и команда Enactus Манас Университета создают
+              проекты, которые приносят реальную пользу обществу, экологии и
+              экономике.
             </p>
-            <Carousel autoplay >
-              {
-                products.map( (product, index) => (
-                  <div key={index}>
-                    <img style={contentStyle} src={product.image} alt="" />
-                  </div>
-                ))
-              }
+            <Carousel autoplay>
+              {products.map((product, index) => (
+                <div key={index}>
+                  <img style={contentStyle} src={product.image} alt="" />
+                </div>
+              ))}
             </Carousel>
           </div>
         </div>
@@ -70,22 +73,33 @@ function AboutUsPage() {
       <div className={stl.proccess}>
         <div className={stl.container}>
           <div className={stl.procces_inner}>
-            <h2>Our Process</h2>
+            <h2>Процесс производства</h2>
             <p>
-              Our process is simple and effective. We start by sourcing the
-              finest natural ingredients from local farmers. Then, we handcraft
-              our products in small batches to ensure quality and freshness.
-              Finally, we package our products sustainably to minimize our
-              environmental impact.
+            🔸 В нашем сообществе трудятся 6 женщин. Кроме
+            традиционного мыла "Шакар", которое изготавливали наши предки, мы
+            производим полезное для кожи мыло из ромашки, календулы, крапивы и
+            облепихи — против экземы и аллергии. Мы выпускаем мыло,
+            благоприятное для кожи, способствующее лечению кожных заболеваний,
+            полезное и экологически чистое. Присоединяйтесь к нам 😍🫶🍀! <br />
+            🔸 Технологии мыловарения нам передали волонтёры JICA из Японии. Мы
+            используем только натуральные добавки. <br />
+            🔸 Наше мыло изготавливается<br />
+            вручную без химических компонентов, его можно использовать для
+            осветления кожи, устранения различных пятен, веснушек, а также для
+            лечения экземы и аллергии. <br />
+            🔸 Также подходит для купания малышей и
+            для чувствительной кожи!
             </p>
             <Carousel autoplay>
-              {
-                proccesses.map( (proccess, index) => (
-                  <div key={index}>
-                    <img style={contentStyle} src={proccess.images} alt="soap making proccess images" />
-                  </div>
-                ))
-              }
+              {proccesses.map((proccess, index) => (
+                <div key={index}>
+                  <img
+                    style={contentStyle}
+                    src={proccess.images}
+                    alt="soap making proccess images"
+                  />
+                </div>
+              ))}
             </Carousel>
           </div>
         </div>

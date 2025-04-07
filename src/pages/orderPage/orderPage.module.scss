@@ -1,0 +1,49 @@
+.orderPage{
+    .container{
+        width: 380px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .main{
+        button{
+            background-color: #8b58fa;
+            &:hover{
+              background-color: #9e7bea !important;
+            }
+          }
+        .form_inner{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            input{
+                padding: 10px 15px;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                background-color: #f2f2f2;
+                &:focus{
+                    background-color: white !important;
+                    border: #8b58fa 1px solid !important;
+                }
+            }
+            .img{
+                background-image: url('/collection/samin4.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 15px;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h3{
+                    font-size: 30px;
+                    font-family: serif;
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+}

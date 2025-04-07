@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import stl from "./productsPage.module.scss";
 import { Button, Card, Divider } from "antd";
 import axios from "axios";
+import { CheckOutlined } from "@ant-design/icons";
 
 function ProductsPage() {
   const [products, setProducts] = useState([]);
@@ -21,13 +22,20 @@ function ProductsPage() {
         <div className={stl.container}>
           <h2>About Our Products</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            cupiditate est quaerat minima esse unde officiis molestiae
-            architecto, nobis deserunt optio veritatis! Minima nulla quis,
-            ratione culpa ipsa numquam iure repudiandae inventore architecto
-            animi quasi assumenda nemo laboriosam distinctio pariatur eos
-            dolore, reprehenderit quidem eum obcaecati iste cupiditate dolores
-            non!
+            Мы с любовью изготавливаем натуральное мыло ручной работы из
+            целебных трав, собранных в живописной местности Иссык-Кульской
+            области. Каждый кусочек нашего мыла — это результат традиций, заботы
+            и экологически чистых ингредиентов.<br />
+            <ul>
+              Все наши продукты:
+                <li style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Изготавливаются вручную</li>
+                <li style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Не содержат химических добавок</li>
+                <li style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Подходят для всех типов кожи</li>
+                <li style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Экологически чистые и безопасные</li>
+            </ul>
+            <br /> С нашим мылом
+            вы не только заботитесь о своей коже, но и поддерживаете местное
+            женское сообщество и устойчивое развитие.
           </p>
         </div>
       </div>
@@ -42,7 +50,7 @@ function ProductsPage() {
                   <Card
                     key={index}
                     hoverable
-                    style={{ width: 300, height: 380}}
+                    style={{ width: 300, height: 380 }}
                     cover={<img alt="example" src={product.image} />}
                   >
                     <Card.Meta
@@ -61,14 +69,14 @@ function ProductsPage() {
 
       <div className={stl.creams}>
         <div className={stl.container}>
-        <div className={stl.creams_inner}>
+          <div className={stl.creams_inner}>
             {products.map((product, index) => {
               if (product.category === "Cream") {
                 return (
                   <Card
                     key={index}
                     hoverable
-                    style={{ width: 300, height: 380}}
+                    style={{ width: 300, height: 380 }}
                     cover={<img alt="example" src={product.image} />}
                   >
                     <Card.Meta
