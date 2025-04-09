@@ -21,11 +21,6 @@ function AboutUsPage() {
     fetchProducts(), fetchProccesses();
   }, []);
 
-  const contentStyle = {
-    height: "210px",
-    width: "100%",
-    objectFit: "cover",
-  };
 
   return (
     <div className={stl.aboutUsPage}>
@@ -60,10 +55,10 @@ function AboutUsPage() {
               проекты, которые приносят реальную пользу обществу, экологии и
               экономике.
             </p>
-            <Carousel autoplay>
+            <Carousel autoplay autoplaySpeed={2000}>
               {products.map((product, index) => (
                 <div key={index}>
-                  <img style={contentStyle} src={product.image} alt="" />
+                  <img  src={product.image} alt="" />
                 </div>
               ))}
             </Carousel>
@@ -90,11 +85,10 @@ function AboutUsPage() {
             🔸 Также подходит для купания малышей и
             для чувствительной кожи!
             </p>
-            <Carousel autoplay>
+            <Carousel autoplay autoplaySpeed={3000}>
               {proccesses.map((proccess, index) => (
                 <div key={index}>
                   <img
-                    style={contentStyle}
                     src={proccess.images}
                     alt="soap making proccess images"
                   />

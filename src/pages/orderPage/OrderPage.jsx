@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, Input, Radio } from "antd";
 import stl from "./orderPage.module.scss";
 import axios from "axios";
@@ -11,13 +11,14 @@ function OrderPage() {
   const [form] = Form.useForm();
   const onFinish = values => {
     const { name, phone } = values;
+    
     const text = `Имя: ${name}, Телефон: ${phone}`;
     axios.post(url, {
       chat_id: chatid,
       text: text
     })
     .then(response => {
-      console.log('Сообщение отправлено:', response.data);
+      console.log('Сообщение отправлено:', response.data, value);
     })
     .catch(error => {
       console.error('Ошибка при отправке:', error);
@@ -40,6 +41,7 @@ function OrderPage() {
                 form={form} 
                 style={{ maxWidth: 600 }}
                 onFinish={onFinish}
+                onChange={e => setValue(e.target.value)}
                 onFinishFailed={onFinishFailed}>
                 <Form.Item label="Имя Фамилия" name="name" rules={[{ required: true, message: 'Please input your name!' }]}>
                   <Input placeholder="Введите ФИО" />

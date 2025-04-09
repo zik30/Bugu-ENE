@@ -1,22 +1,51 @@
 .productsPage {
+   color: #37054f;
   .container {
     width: 380px;
     margin: 0 auto;
     padding-top: 50px;
     text-align: center;
+    @media (min-width: 760px) {
+      width: 630px;
+    }
+    @media (min-width: 1010px) {
+      width: 1000px;
+      text-align: center;
+    }
+    @media (min-width: 1300px) {
+      width: 1200px;
+      text-align: center;
+    }
   }
   .header {
+    @media (min-width: 760px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
     h2 {
       font-size: 30px;
       margin: 0;
       width: 300px;
       margin: 0 auto 20px;
+      @media(min-width: 760px){
+        width: 400px;
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
     }
     p {
       margin: 0 auto 50px;
       font-size: 16px;
       line-height: 30px;
       width: 300px;
+      @media(min-width: 760px) {
+        font-size: 18px;
+        width: 550px;
+      }
+      @media(min-width: 1010px) {
+        width: 800px;
+        margin: 0 auto 50px;
+      }
     }
   }
   .soaps_inner {
@@ -27,6 +56,12 @@
     align-items: center;
     gap: 20px;
     position: relative;
+    @media(min-width: 760px){
+      gap: 20px 10px;
+    }
+    @media(min-width: 1010px){
+      gap: 30px 20px;
+    }
     img {
       width: 300px;
       height: 200px;
@@ -71,9 +106,8 @@
   }
 }
 
-
 .customChecklist li::before {
-  content: '✔';
+  content: "✔";
   margin-right: 8px;
   color: green;
 }

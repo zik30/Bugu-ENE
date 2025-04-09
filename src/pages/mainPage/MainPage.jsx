@@ -49,22 +49,38 @@ function MainPage() {
           </div>
           <Swiper
             slidesPerView={2}
-            spaceBetween={30}
+            spaceBetween={0}
             pagination={{
               clickable: true,
             }}
             modules={[Pagination]}
             className="mySwiper"
+            breakpoints={{
+              1200: {
+                slidesPerView: 5, // на экранах от 1200px и выше — 5 карточек
+              },
+              1024: {
+                slidesPerView: 4, // на экранах от 1024px и выше — 4 карточки
+              },
+              768: {
+                slidesPerView: 3, // например, на планшетах — 3
+              },
+              0: {
+                slidesPerView: 2, // по умолчанию (телефоны)
+              },
+            }}
           >
             {products.map((product, index) => (
               <SwiperSlide style={{ paddingBottom: 40 }} key={index}>
                 <Card
+                  className={stl.card}
                   hoverable
-                  style={{ width: 200, height: 300 }}
+                  style={{ height: 300 }}
                   cover={<img alt="example" src={product.image} />}
                 >
                   <Card.Meta
-                    title={product.name}
+                    style={{ color: '#37054f' }}
+                    title={ <p style={{color: '#37054f', margin: 0}}>{product.name}</p>}
                     description={product.category}
                   />
                 </Card>
@@ -73,11 +89,12 @@ function MainPage() {
             <SwiperSlide style={{ paddingBottom: 40 }} >
               <Card
                 hoverable
-                style={{ width: 200, height: 300 }}
+                style={{ width: 200, height: 300 , color: '#37054f'}}
                 cover={<img alt="example" src={'/collection/samin3.jpg'} />}
               >
                 <Card.Meta
-                  title={<Link to={"/products"}>Подробнее</Link>}
+                  style={{ color: '#37054f' }}
+                  title={<Link style={{color: '#a32cdb'}} to={"/products"}>Подробнее</Link>}
                   description="у нас много вещей"
                 />
               </Card>

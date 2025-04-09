@@ -10,6 +10,12 @@
     align-items: center;
     margin: 0 auto;
     position: relative;
+    @media (min-width: 760px) {
+      width: 690px;
+    }
+    @media(min-width: 1000px) {
+      width: 940px;
+    }
     .logo {
       display: flex;
       align-items: center;
@@ -33,45 +39,66 @@
     right: 0px;
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: -30px;
     transform: translate(-50%, -50%);
-    button:hover{
+    button:hover {
       border: #8b58fa 1px solid !important;
       color: #8b58fa !important;
     }
   }
 }
-  
 
-.drawer_pages{
+.drawer_pages {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 20px;
+  a {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
-    padding: 0 20px;
-    a {
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    &:hover {
+      color: #a200ff;
+    }
+
+    .drawer_pages {
       display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      &:hover {
-        color: #a200ff;
+      flex-direction: column;
+      gap: 2px;
+      padding: 0 20px;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        &:hover {
+          color: #a200ff;
+        }
       }
+      
     }
   }
+}
 
-.drawer{
-  div{
+.drawer {
+  div {
     color: #ffffff !important;
     font-size: 25px !important;
   }
-  a{
+  a {
     color: #ffffff;
     font-size: 16px;
   }
-  button{
+  button {
     background-color: #8b58fa;
-    &:hover{
+    &:hover {
       background-color: #9e7bea !important;
+    }
+    @media(min-width: 760px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
     }
   }
 }

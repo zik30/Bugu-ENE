@@ -28,10 +28,10 @@ function ProductsPage() {
             и экологически чистых ингредиентов.<br />
             <ul>
               Все наши продукты:
-                <li style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Изготавливаются вручную</li>
-                <li style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Не содержат химических добавок</li>
-                <li style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Подходят для всех типов кожи</li>
-                <li style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Экологически чистые и безопасные</li>
+                <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Изготавливаются вручную</li>
+                <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Не содержат химических добавок</li>
+                <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Подходят для всех типов кожи</li>
+                <li style={{ display: 'flex', alignItems: 'center',justifyContent: 'center', marginBottom: 8 }}><CheckOutlined style={{ color: '#8b58fa', marginRight: 8 }} /> Экологически чистые и безопасные</li>
             </ul>
             <br /> С нашим мылом
             вы не только заботитесь о своей коже, но и поддерживаете местное
@@ -39,7 +39,7 @@ function ProductsPage() {
           </p>
         </div>
       </div>
-      <Divider style={{ borderColor: "#7cb305" }}>Soaps</Divider>
+      <Divider style={{ borderColor: "#7cb305" ,  color: '#37054f'}}>Soaps</Divider>
 
       <div className={stl.soaps}>
         <div className={stl.container}>
@@ -54,7 +54,7 @@ function ProductsPage() {
                     cover={<img alt="example" src={product.image} />}
                   >
                     <Card.Meta
-                      title={product.name}
+                      title={<p style={{color: '#37054f', margin: 0}}>{product.name}</p>}
                       description={product.description}
                     />
                     <Button>{product.price} Cом</Button>
@@ -65,7 +65,7 @@ function ProductsPage() {
           </div>
         </div>
       </div>
-      <Divider style={{ borderColor: "#7cb305" }}>Creams</Divider>
+      <Divider style={{ borderColor: "#7cb305",  color: '#37054f' }}>Creams</Divider>
 
       <div className={stl.creams}>
         <div className={stl.container}>
@@ -80,7 +80,7 @@ function ProductsPage() {
                     cover={<img alt="example" src={product.image} />}
                   >
                     <Card.Meta
-                      title={product.name}
+                      title={<p style={{color: '#37054f', margin: 0}}>{product.name}</p>}
                       description={product.description}
                     />
                     <Button>{product.price} Cом</Button>
