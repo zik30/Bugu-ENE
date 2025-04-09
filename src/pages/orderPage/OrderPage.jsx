@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Input, Radio } from "antd";
+import { Button, Form, Input, message, Result} from "antd";
 import stl from "./orderPage.module.scss";
 import axios from "axios";
 
@@ -9,6 +9,23 @@ function OrderPage() {
   const chatid = '@bugu_ene_samyn'
   const url = 'https://api.telegram.org/bot' + token + '/sendMessage'
   const [form] = Form.useForm();
+  const [messageApi, contextHolder] = message.useMessage();
+  const success = () => {
+    messageApi.open({
+      type: 'success',
+      content: <Result
+      status="success"
+      title="Ваша заявка успешно отправлена!"
+      subTitle="Вам позвонит наш менеджер в ближайшее время."
+      
+    />,
+      duration: 5,
+      className: 'custom-class',
+      style: {
+        margin: "0 auto",
+      },
+    });
+  };
   const onFinish = values => {
     const { name, phone } = values;
     
@@ -18,7 +35,8 @@ function OrderPage() {
       text: text
     })
     .then(response => {
-      console.log('Сообщение отправлено:', response.data, value);
+      console.log('Сообщение отправлено:', response.data);
+      success()
     })
     .catch(error => {
       console.error('Ошибка при отправке:', error);
@@ -51,6 +69,7 @@ function OrderPage() {
                   <Input placeholder="Введите номер телефона" />
                 </Form.Item>
                 <Form.Item>
+                  {contextHolder}
                   <Button type="primary" htmlType="submit">Submit</Button>
                 </Form.Item>
               </Form>
