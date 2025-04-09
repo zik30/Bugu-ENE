@@ -42,6 +42,7 @@ function OrderPage() {
                 style={{ maxWidth: 600 }}
                 onFinish={onFinish}
                 onChange={e => setValue(e.target.value)}
+                validateTrigger="onSubmit"
                 onFinishFailed={onFinishFailed}>
                 <Form.Item label="Имя Фамилия" name="name" rules={[{ required: true, message: 'Please input your name!' }]}>
                   <Input placeholder="Введите ФИО" />
